@@ -4,66 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بانک سوال - مدیریت فایل‌ها</title>
+    <title>بانک سوالات ریاضی هشتم</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>بانک سوال خوارزمی</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">خانه</a></li>
-                <li><a href="#questions">سوالات</a></li>
-            </ul>
+    <div class="container">
+        <!-- تب‌ها -->
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="home">خانه</button>
+            <button class="tab-button" data-tab="questions">سوالات</button>
         </nav>
-    </header>
 
-    <main>
-        <!-- بخش خانه -->
-        <section id="home">
-            <h2>خوش آمدید</h2>
-            <p>این سایت برای مدیریت و اشتراک‌گذاری فایل‌های سوالات آزمون طراحی شده است.</p>
-        </section>
+        <!-- محتوای اصلی -->
+        <main>
+            <!-- خانه -->
+            <section id="home" class="tab-content active">
+                <h1>به بانک سوالات ریاضی خوش آمدید!</h1>
+                <p>این سایت برای مدیریت و اشتراک‌گذاری سوالات ریاضی طراحی شده است.</p>
+            </section>
 
-        <!-- بخش سوالات -->
-        <section id="questions">
-            <h2>سوالات</h2>
-            <div class="categories">
-                <h3>دسته‌بندی‌ها</h3>
-                <ul>
-                    <li><a href="#timss">نمونه سوالات آزمون تیمز</a></li>
-                    <li><a href="#gifted">نمونه سوالات تیزهوشان نهم به دهم</a></li>
-                    <li><a href="#rational-numbers">محور اعداد گویا</a></li>
-                    <li><a href="#equations">محور معادلات</a></li>
-                    <li><a href="#algebra">تجزیه عبارت‌های جبری</a></li>
-                    <li><a href="#pythagoras">رابطه فیثاغورس</a></li>
-                    <li><a href="#power">توان</a></li>
-                    <li><a href="#square-root">جذر</a></li>
-                    <li><a href="#angles">زاویه‌های مرکزی و محاطی در دایره</a></li>
-                    <li><a href="#congruence">هم‌نهشتی مثلث‌ها</a></li>
-                    <li><a href="#probability">احتمال</a></li>
-                    <li><a href="#vectors">بردار و مختصات</a></li>
-                </ul>
-            </div>
-            <div id="upload-section">
-                <h3>آپلود فایل PDF</h3>
-                <form id="upload-form">
-                    <input type="file" id="file-input" accept="application/pdf">
-                    <button type="button" id="upload-button">آپلود</button>
-                </form>
-                <h3>فایل‌های آپلود شده</h3>
-                <ul id="pdf-list">
-                    <!-- فایل‌ها در اینجا نمایش داده می‌شوند -->
-                </ul>
-            </div>
-        </section>
-    </main>
+            <!-- سوالات -->
+            <section id="questions" class="tab-content">
+                <h1>سوالات</h1>
+                <div class="categories">
+                    <h2>دسته‌بندی‌ها</h2>
+                    <ul>
+                        <li data-category="timss">نمونه سوالات آزمون تیمز</li>
+                        <li data-category="gifted">نمونه سوالات تیزهوشان نهم به دهم</li>
+                        <li data-category="rational-numbers">محور اعداد گویا</li>
+                        <li data-category="equations">محور معادلات</li>
+                        <li data-category="algebra">تجزیه عبارت‌های جبری</li>
+                        <li data-category="pythagoras">رابطه فیثاغورس</li>
+                        <li data-category="power">توان</li>
+                        <li data-category="square-root">جذر</li>
+                        <li data-category="angles">زاویه‌های مرکزی و محاطی در دایره</li>
+                        <li data-category="congruence">هم‌نهشتی مثلث‌ها</li>
+                        <li data-category="probability">احتمال</li>
+                        <li data-category="vectors">بردار و مختصات</li>
+                    </ul>
+                </div>
 
-    <footer>
-        <p>&copy; 1403/1404 بانک سوال خوارزمی</p>
-    </footer>
+                <!-- آپلود فایل -->
+                <div id="upload-section">
+                    <h3>آپلود فایل PDF</h3>
+                    <form id="upload-form">
+                        <input type="file" id="file-input" accept="application/pdf">
+                        <button type="button" id="upload-button">آپلود</button>
+                    </form>
+                    <h3>فایل‌های آپلود شده</h3>
+                    <ul id="pdf-list">
+                        <!-- فایل‌ها در اینجا نمایش داده می‌شوند -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- فوتر -->
+        <footer>
+            <p>نمونه بانک سوالات ریاضی هشتم پارسا یزدانی و سعید نژاد مقدم دوره یازدهم خوارزمی نوجوانان (۱۴۰۳/۱۴۰۴®)</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
